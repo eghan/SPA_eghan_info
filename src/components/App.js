@@ -1,23 +1,27 @@
 import React from 'react';
 import Interactive from 'react-interactive';
 import { Switch, Route } from 'react-router-dom';
+import { Navs } from './Navs';
+import { Button } from 'react-bootstrap';
 import Home from './Home';
 import ExampleComponent from './ExampleComponent';
 import PageNotFound from './PageNotFound';
 import Breadcrumbs from './Breadcrumbs';
 import s from '../styles/app.style';
 
+
 export default function App() {
   return (
+
     <div style={s.root}>
       <h1 style={s.title}>Single Page Apps for GitHub Pages</h1>
+      <Button bsStyle="danger">Hello World Danger</Button>
       <Interactive
         as="a"
         href="https://github.com/rafrex/spa-github-pages"
         style={s.repoLink}
         {...s.link}
       >https://github.com/rafrex/spa-github-pages</Interactive>
-
       <nav style={s.breadcrumbs}>
         <Breadcrumbs />
       </nav>
